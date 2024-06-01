@@ -1,4 +1,4 @@
-import { json, useLoaderData } from 'react-router-dom';
+import { useLoaderData, json } from 'react-router-dom';
 import EventsList from '../components/EventsList';
 
 export default function EventsPage() {
@@ -18,10 +18,10 @@ export async function loader() {
     /* throw new Response(JSON.stringify({ message: 'Could not fetch events ' }), {
       status: 500
     }); */
-    return json(
-      { message: 'Could not fetch events ' },
+    throw json(
+      { message: 'Could not fetch events.' },
       {
-        status: 500
+        status: 500,
       }
     );
   } else {
