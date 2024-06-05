@@ -64,7 +64,7 @@ router.post('/', async (req, res, next) => {
     setTimeout(() => {
       res.status(201).json({ message: 'Event saved.', event: data });
     }, 1500);
-    // actificial delay is set to demonstrate how this can be done
+    // actificial delay is set to demonstrate how this can be done 
   } catch (error) {
     next(error);
   }
