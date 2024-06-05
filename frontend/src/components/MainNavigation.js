@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
+
 import classes from './MainNavigation.module.css';
+import NewsletterSignup from './NewsletterSignup';
 
 function MainNavigation() {
   return (
@@ -12,9 +14,6 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              /* Link component would work as well
-              but Navlink can receive functon to its prop
-              and we can decontract it like above */
               end
             >
               Home
@@ -30,8 +29,19 @@ function MainNavigation() {
               Events
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/newsletter"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Newsletter
+            </NavLink>
+          </li>
         </ul>
       </nav>
+      <NewsletterSignup />
     </header>
   );
 }
