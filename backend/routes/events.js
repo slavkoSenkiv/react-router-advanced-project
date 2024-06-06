@@ -16,7 +16,7 @@ router.get('/', async (req, res, next) => {
       // this is intentional delay to demonstrate
       // that events page will be loaded with delay specified here
       res.json({ events: events });
-    }, 1500);
+    }, 3000);
   } catch (error) {
     next(error);
   }
@@ -63,7 +63,7 @@ router.post('/', async (req, res, next) => {
     await add(data);
     setTimeout(() => {
       res.status(201).json({ message: 'Event saved.', event: data });
-    }, 1500);
+    }, 1000);
     // actificial delay is set to demonstrate how this can be done 
   } catch (error) {
     next(error);
