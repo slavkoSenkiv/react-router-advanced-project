@@ -8,7 +8,7 @@ function NewsletterSignup() {
 
   useEffect(() => {
     if (state === 'idle' && data && data.message) {
-      window.alert('Signup successful!')
+      window.alert('Signup successful!  ')
     }
   }, [data, state])
   return (
